@@ -6,6 +6,7 @@ window.onload = function () {
     banner();
     // 活动倒计时
     downTime();
+    lihover();
 };
 
 //顶部搜索栏
@@ -25,6 +26,17 @@ var search = function () {
         oSearchBox.style.background = "rgba(216,80,92," + opacity + ")";
     }
 };
+
+//li标签的触摸效果
+var lihover = function(){
+    var liObj = document.querySelectorAll(".jd_nav li");
+    for(var i=0;i<liObj.length;i++){
+        liObj[i].addEventListener("touchstart",function(e){
+            console.log(e.touches)
+        });
+    }
+}
+
 
 //banner轮播图
 var banner = function () {
