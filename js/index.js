@@ -1,3 +1,4 @@
+//  document.write("<script language=javascript src='jquery-1.12.1.min.js'></script>");
 // 页面加载完成开始执行js代码
 window.onload = function () {
     //顶部搜索栏
@@ -32,7 +33,10 @@ var lihover = function(){
     var liObj = document.querySelectorAll(".jd_nav li");
     for(var i=0;i<liObj.length;i++){
         liObj[i].addEventListener("touchstart",function(e){
-            console.log(e.touches)
+            this.classList.add('activ');
+        });
+        liObj[i].addEventListener("touchend",function(e){
+            this.classList.remove("activ");
         });
     }
 }

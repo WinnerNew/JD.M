@@ -165,6 +165,32 @@
     padding: 10px 0;
 }
 
+@keyframes myfirst
+{
+    from {background: #f23030;}
+    to {background: #0099ff;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    from {background: #f23030;}
+    to {background: #0099ff;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+   
+    from {background: #f23030;}
+    to {background: #0099ff;}
+}
+
+.activ {
+    animation: myfirst 0.5s;
+    -moz-animation: myfirst 0.5s;	/* Firefox */
+    -webkit-animation: myfirst 0.5s;	/* Safari 和 Chrome */
+    -o-animation: myfirst 0.5s;
+}
+
 .jd_nav ul li a {
     display: block;
     width: 100%;
